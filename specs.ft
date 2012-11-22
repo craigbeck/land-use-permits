@@ -1,0 +1,34 @@
+# Land Use Permits HW 6
+
+## Entities.todo
+- Applicant
+	- properties
+		- name
+		- has many applications
+	- create managed class
+- Application
+	- properties
+		- number
+		- status
+		- value
+		- dateApplied
+		- dateDecided
+	- create managed class
+- Property
+	- properties
+		- latitude
+		- longitude
+		- address
+		- has many applications
+	- create managed class
+- find or create methods
+	- application
+	- property
+	- applicant
+- method to create dummy data
+
+## UI.todo
+- tab view based UI
+	- applications
+	- properties
+- entity properties editable
