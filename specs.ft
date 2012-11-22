@@ -2,24 +2,24 @@
 
 ## Entities.todo
 - Applicant
-	- properties
-		- name
-		- has many applications
+	- properties @done
+		- name @done
+		- has many applications @done
 	- create managed class
 - Application
-	- properties
-		- number
-		- status
-		- value
-		- dateApplied
-		- dateDecided
+	- properties @done
+		- number @done
+		- status @done
+		- value @done
+		- dateApplied @done
+		- dateDecided @done
 	- create managed class
 - Property
-	- properties
-		- latitude
-		- longitude
-		- address
-		- has many applications
+	- properties @done
+		- latitude @done
+		- longitude @done
+		- address @done
+		- has many applications @done
 	- create managed class
 - find or create methods
 	- application
