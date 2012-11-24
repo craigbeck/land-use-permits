@@ -1,0 +1,3 @@
+[submodule "MacMapKit"]
+	path = MacMapKit
+	url = git@github.com:craigbeck/MacMapKit.git

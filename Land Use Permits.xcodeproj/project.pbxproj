@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937CC3C816616F570004CEC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937CC3C316616F120004CEC5 /* MapKit.framework */; };
+		937CC3CB1661715D0004CEC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 937CC3CA1661715D0004CEC5 /* AppDelegate.m */; };
 		93AB80BC165DB69000EE1E93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AB80BB165DB69000EE1E93 /* Cocoa.framework */; };
 		93AB80C6165DB69000EE1E93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93AB80C4165DB69000EE1E93 /* InfoPlist.strings */; };
 		93AB80C8165DB69000EE1E93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB80C7165DB69000EE1E93 /* main.m */; };
@@ -22,6 +24,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		937CC3C016616F120004CEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937CC3B616616F110004CEC5 /* MapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F6EF13511F13B0D0077E84F;
+			remoteInfo = DemoApp;
+		};
+		937CC3C216616F120004CEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937CC3B616616F110004CEC5 /* MapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F6EF17D11F13F690077E84F;
+			remoteInfo = MapKitFramework;
+		};
+		937CC3C416616F120004CEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937CC3B616616F110004CEC5 /* MapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5FB7435711FE6E4A00AB2079;
+			remoteInfo = MapKit;
+		};
+		937CC3C616616F460004CEC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937CC3B616616F110004CEC5 /* MapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F6EF17C11F13F690077E84F;
+			remoteInfo = MapKitFramework;
+		};
 		93AB80E2165DB69000EE1E93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 93AB80AE165DB68F00EE1E93 /* Project object */;
@@ -32,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		937CC3B616616F110004CEC5 /* MapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapKit.xcodeproj; path = MacMapKit/Source/MapKit.xcodeproj; sourceTree = "<group>"; };
+		937CC3C91661715D0004CEC5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		937CC3CA1661715D0004CEC5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		93AB80B7165DB69000EE1E93 /* Land Use Permits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Land Use Permits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AB80BB165DB69000EE1E93 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		93AB80BE165DB69000EE1E93 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -60,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937CC3C816616F570004CEC5 /* MapKit.framework in Frameworks */,
 				93AB80BC165DB69000EE1E93 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,9 +110,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		937CC3B716616F110004CEC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				937CC3C116616F120004CEC5 /* DemoApp.app */,
+				937CC3C316616F120004CEC5 /* MapKit.framework */,
+				937CC3C516616F120004CEC5 /* MapKit.ibplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		93AB80AC165DB68F00EE1E93 = {
 			isa = PBXGroup;
 			children = (
+				937CC3B616616F110004CEC5 /* MapKit.xcodeproj */,
 				93AB80C1165DB69000EE1E93 /* Land Use Permits */,
 				93AB80E4165DB69000EE1E93 /* Land Use PermitsTests */,
 				93AB80BA165DB69000EE1E93 /* Frameworks */,
@@ -124,6 +169,8 @@
 				93AB80D3165DB69000EE1E93 /* MainMenu.xib */,
 				93AB80D6165DB69000EE1E93 /* Document.xcdatamodeld */,
 				93AB80C2165DB69000EE1E93 /* Supporting Files */,
+				937CC3C91661715D0004CEC5 /* AppDelegate.h */,
+				937CC3CA1661715D0004CEC5 /* AppDelegate.m */,
 			);
 			path = "Land Use Permits";
 			sourceTree = "<group>";
@@ -173,6 +220,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				937CC3C716616F460004CEC5 /* PBXTargetDependency */,
 			);
 			name = "Land Use Permits";
 			productName = "Land Use Permits";
@@ -217,6 +265,12 @@
 			mainGroup = 93AB80AC165DB68F00EE1E93;
 			productRefGroup = 93AB80B8165DB69000EE1E93 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 937CC3B716616F110004CEC5 /* Products */;
+					ProjectRef = 937CC3B616616F110004CEC5 /* MapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				93AB80B6165DB69000EE1E93 /* Land Use Permits */,
@@ -224,6 +278,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		937CC3C116616F120004CEC5 /* DemoApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = DemoApp.app;
+			remoteRef = 937CC3C016616F120004CEC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		937CC3C316616F120004CEC5 /* MapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MapKit.framework;
+			remoteRef = 937CC3C216616F120004CEC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		937CC3C516616F120004CEC5 /* MapKit.ibplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MapKit.ibplugin;
+			remoteRef = 937CC3C416616F120004CEC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		93AB80B5165DB69000EE1E93 /* Resources */ = {
@@ -271,6 +349,7 @@
 				93AB80C8165DB69000EE1E93 /* main.m in Sources */,
 				93AB80CF165DB69000EE1E93 /* Document.m in Sources */,
 				93AB80D8165DB69000EE1E93 /* Document.xcdatamodeld in Sources */,
+				937CC3CB1661715D0004CEC5 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +364,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		937CC3C716616F460004CEC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MapKitFramework;
+			targetProxy = 937CC3C616616F460004CEC5 /* PBXContainerItemProxy */;
+		};
 		93AB80E3165DB69000EE1E93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 93AB80B6165DB69000EE1E93 /* Land Use Permits */;
@@ -391,9 +475,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/MapKit-bfotoqdomlpnaractxnabictsmoz/Build/Products/Debug\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Land Use Permits/Land Use Permits-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "Land Use Permits/Land Use Permits-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,9 +501,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/MapKit-bfotoqdomlpnaractxnabictsmoz/Build/Products/Debug\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Land Use Permits/Land Use Permits-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "Land Use Permits/Land Use Permits-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +572,7 @@
 				93AB80F1165DB69000EE1E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93AB80F2165DB69000EE1E93 /* Build configuration list for PBXNativeTarget "Land Use PermitsTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +581,7 @@
 				93AB80F4165DB69000EE1E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

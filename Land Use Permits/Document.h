@@ -7,7 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <MapKit/MapKit.h>
 
-@interface Document : NSPersistentDocument
+#define METERS_PER_MILE 1609.344
+
+@interface Document : NSPersistentDocument <MKMapViewDelegate, MKGeocoderDelegate>
+@property (assign) IBOutlet NSTextField *addressField;
+@property (assign) IBOutlet MKMapView *mapView;
+
+- (IBAction)goToAddress:(id)sender;
 
 @end
