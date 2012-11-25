@@ -6,8 +6,11 @@
 //  Copyright (c) 2012 Craig Beck. All rights reserved.
 //
 
-#import "Document.h"
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import "Document.h"
+#import "PermitAnnotation.h"
 
 @implementation Document
 
@@ -33,14 +36,20 @@
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
     
     [[self mapView] setDelegate: self];
+//    [[self mapView] setCenterCoordinate:coordinate];
+    [self performSelector:@selector(goToStart:) withObject:[self mapView] afterDelay:0.5];
 
-    NSString *address = @"18357 Evanston Ave N, Shoreline WA";
+    NSString *address = @"1120 John St, Seattle WA";
     [[self addressField] setStringValue:address];
-//    NSLog(@"address: %@", address);
-//    MKGeocoder *geocoderCoord = [[MKGeocoder alloc] initWithAddress:address];
-//    geocoderCoord.delegate = self;
-//    [geocoderCoord start];
-    [self goToAddress:self];
+//    [self goToAddress:self];
+}
+
+- (void)goToStart:(id)obj
+{
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 47.622890;
+    coordinate.longitude = -122.335317;
+    [obj setCenterCoordinate:coordinate zoomLevel:16 animated:NO];
 }
 
 + (BOOL)autosavesInPlace
@@ -58,14 +67,13 @@
 #pragma mark - MKGeocoder protocol
 - (void)geocoder:(MKGeocoder *)geocoder didFindCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    NSLog(@"found lat: %f lon: %f", coordinate.latitude, coordinate.longitude);
-    MKCoordinateRegion viewRegion = [[self mapView] region];
-    NSLog(@"region span lat: %f lon: %f", viewRegion.span.latitudeDelta, viewRegion.span.longitudeDelta);
-    
-//    MKCoordinateSpan span = MKCoordinateSpanMake(0.009, 0.02);
-//    MKCoordinateRegion region = MKCoordinateRegionMake(coordinate, span);
-//    [[self mapView] setRegion:region animated:YES];
-    [[self mapView] setCenterCoordinate:coordinate animated:YES];
+    for (id annotation in [[self mapView] annotations])
+    {
+        [[self mapView] removeAnnotation:annotation];
+    }
+    [[self mapView] setCenterCoordinate:coordinate zoomLevel:16 animated:NO];
+    PermitAnnotation *annotation = [[PermitAnnotation alloc] initWithCoordinate:coordinate];
+    [[self mapView] addAnnotation:[annotation autorelease]];
 }
 
 - (void)geocoder:(MKGeocoder *)geocoder didFailWithError:(NSError *)error
@@ -73,10 +81,26 @@
     NSLog(@"failed: %@", error);
 }
 
+
+- (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
+{
+//    MKCoordinateRegion viewRegion = [mapView region];
+//    NSLog(@"regionWillChange center: %f,%f span: %f,%f animated: %d", viewRegion.center.latitude, viewRegion.center.longitude, viewRegion.span.latitudeDelta, viewRegion.span.longitudeDelta, animated);
+}
+
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    MKCoordinateRegion region = [mapView region];
-    NSLog(@"center: %f,%f span: %f,%f viewSize: %@", region.center.latitude, region.center.longitude, region.span.latitudeDelta, region.span.longitudeDelta, NSStringFromRect([mapView bounds]));
+//    MKCoordinateRegion viewRegion = [mapView region];
+//    NSLog(@"regionDidChange center: %f,%f span: %f,%f animated: %d", viewRegion.center.latitude, viewRegion.center.longitude, viewRegion.span.latitudeDelta, viewRegion.span.longitudeDelta, animated);
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    NSLog(@"viewForAnnotation: %@", annotation);
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"];
+    pin.animatesDrop = YES;
+    pin.pinColor = MKPinAnnotationColorGreen;
+    return [pin autorelease];
 }
 
 @end

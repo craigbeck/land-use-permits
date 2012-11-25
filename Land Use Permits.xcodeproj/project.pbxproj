@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		937CC3C816616F570004CEC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937CC3C316616F120004CEC5 /* MapKit.framework */; };
 		937CC3CB1661715D0004CEC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 937CC3CA1661715D0004CEC5 /* AppDelegate.m */; };
+		937CC3DF1661A0AB0004CEC5 /* PermitAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 937CC3DE1661A0AB0004CEC5 /* PermitAnnotation.m */; };
 		93AB80BC165DB69000EE1E93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AB80BB165DB69000EE1E93 /* Cocoa.framework */; };
 		93AB80C6165DB69000EE1E93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93AB80C4165DB69000EE1E93 /* InfoPlist.strings */; };
 		93AB80C8165DB69000EE1E93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB80C7165DB69000EE1E93 /* main.m */; };
@@ -65,6 +66,8 @@
 		937CC3B616616F110004CEC5 /* MapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MapKit.xcodeproj; path = MacMapKit/Source/MapKit.xcodeproj; sourceTree = "<group>"; };
 		937CC3C91661715D0004CEC5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		937CC3CA1661715D0004CEC5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		937CC3DD1661A0AB0004CEC5 /* PermitAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermitAnnotation.h; sourceTree = "<group>"; };
+		937CC3DE1661A0AB0004CEC5 /* PermitAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermitAnnotation.m; sourceTree = "<group>"; };
 		93AB80B7165DB69000EE1E93 /* Land Use Permits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Land Use Permits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AB80BB165DB69000EE1E93 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		93AB80BE165DB69000EE1E93 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -171,6 +174,8 @@
 				93AB80C2165DB69000EE1E93 /* Supporting Files */,
 				937CC3C91661715D0004CEC5 /* AppDelegate.h */,
 				937CC3CA1661715D0004CEC5 /* AppDelegate.m */,
+				937CC3DD1661A0AB0004CEC5 /* PermitAnnotation.h */,
+				937CC3DE1661A0AB0004CEC5 /* PermitAnnotation.m */,
 			);
 			path = "Land Use Permits";
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				93AB80CF165DB69000EE1E93 /* Document.m in Sources */,
 				93AB80D8165DB69000EE1E93 /* Document.xcdatamodeld in Sources */,
 				937CC3CB1661715D0004CEC5 /* AppDelegate.m in Sources */,
+				937CC3DF1661A0AB0004CEC5 /* PermitAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
