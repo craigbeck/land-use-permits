@@ -78,9 +78,8 @@
 
 - (void)geocoder:(MKGeocoder *)geocoder didFailWithError:(NSError *)error
 {
-    NSLog(@"failed: %@", error);
+    NSLog(@"goecoder lookup failed: %@", error);
 }
-
 
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
@@ -96,7 +95,6 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    NSLog(@"viewForAnnotation: %@", annotation);
     MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"];
     pin.animatesDrop = YES;
     pin.pinColor = MKPinAnnotationColorGreen;
