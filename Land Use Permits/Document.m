@@ -49,7 +49,7 @@
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = 47.622890;
     coordinate.longitude = -122.335317;
-    [obj setCenterCoordinate:coordinate zoomLevel:16 animated:NO];
+    [obj setCenterCoordinate:coordinate zoomLevel:12 animated:NO];
 }
 
 + (BOOL)autosavesInPlace

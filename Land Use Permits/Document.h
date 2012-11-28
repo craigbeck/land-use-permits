@@ -14,7 +14,7 @@
 @interface Document : NSPersistentDocument <MKMapViewDelegate, MKGeocoderDelegate>
 @property (assign) IBOutlet NSTextField *addressField;
 @property (assign) IBOutlet MKMapView *mapView;
-
-- (IBAction)goToAddress:(id)sender;
+@property (assign) IBOutlet NSArrayController *applications;
+@property (assign) IBOutlet NSArrayController *applicants;
 
 @end
