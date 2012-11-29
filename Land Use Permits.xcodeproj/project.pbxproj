@@ -10,6 +10,9 @@
 		937CC3C816616F570004CEC5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 937CC3C316616F120004CEC5 /* MapKit.framework */; };
 		937CC3CB1661715D0004CEC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 937CC3CA1661715D0004CEC5 /* AppDelegate.m */; };
 		937CC3DF1661A0AB0004CEC5 /* PermitAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 937CC3DE1661A0AB0004CEC5 /* PermitAnnotation.m */; };
+		939FC92A1667272300F7BD00 /* Applicant.m in Sources */ = {isa = PBXBuildFile; fileRef = 939FC9291667272300F7BD00 /* Applicant.m */; };
+		939FC9301667273600F7BD00 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 939FC92F1667273600F7BD00 /* Application.m */; };
+		939FC9331667274000F7BD00 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 939FC9321667274000F7BD00 /* Property.m */; };
 		93AB80BC165DB69000EE1E93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AB80BB165DB69000EE1E93 /* Cocoa.framework */; };
 		93AB80C6165DB69000EE1E93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93AB80C4165DB69000EE1E93 /* InfoPlist.strings */; };
 		93AB80C8165DB69000EE1E93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AB80C7165DB69000EE1E93 /* main.m */; };
@@ -68,6 +71,12 @@
 		937CC3CA1661715D0004CEC5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		937CC3DD1661A0AB0004CEC5 /* PermitAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermitAnnotation.h; sourceTree = "<group>"; };
 		937CC3DE1661A0AB0004CEC5 /* PermitAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermitAnnotation.m; sourceTree = "<group>"; };
+		939FC9281667272300F7BD00 /* Applicant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Applicant.h; sourceTree = "<group>"; };
+		939FC9291667272300F7BD00 /* Applicant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Applicant.m; sourceTree = "<group>"; };
+		939FC92E1667273600F7BD00 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		939FC92F1667273600F7BD00 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		939FC9311667274000F7BD00 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
+		939FC9321667274000F7BD00 /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
 		93AB80B7165DB69000EE1E93 /* Land Use Permits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Land Use Permits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93AB80BB165DB69000EE1E93 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		93AB80BE165DB69000EE1E93 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -171,6 +180,12 @@
 				93AB80D0165DB69000EE1E93 /* Document.xib */,
 				93AB80D3165DB69000EE1E93 /* MainMenu.xib */,
 				93AB80D6165DB69000EE1E93 /* Document.xcdatamodeld */,
+				939FC9311667274000F7BD00 /* Property.h */,
+				939FC9321667274000F7BD00 /* Property.m */,
+				939FC92E1667273600F7BD00 /* Application.h */,
+				939FC92F1667273600F7BD00 /* Application.m */,
+				939FC9281667272300F7BD00 /* Applicant.h */,
+				939FC9291667272300F7BD00 /* Applicant.m */,
 				93AB80C2165DB69000EE1E93 /* Supporting Files */,
 				937CC3C91661715D0004CEC5 /* AppDelegate.h */,
 				937CC3CA1661715D0004CEC5 /* AppDelegate.m */,
@@ -356,6 +371,9 @@
 				93AB80D8165DB69000EE1E93 /* Document.xcdatamodeld in Sources */,
 				937CC3CB1661715D0004CEC5 /* AppDelegate.m in Sources */,
 				937CC3DF1661A0AB0004CEC5 /* PermitAnnotation.m in Sources */,
+				939FC92A1667272300F7BD00 /* Applicant.m in Sources */,
+				939FC9301667273600F7BD00 /* Application.m in Sources */,
+				939FC9331667274000F7BD00 /* Property.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

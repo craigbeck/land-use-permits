@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Applicant" syncable="YES">
+    <entity name="Applicant" representedClassName="Applicant" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="applications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Application" inverseName="applicant" inverseEntity="Application" syncable="YES"/>
     </entity>
-    <entity name="Application" syncable="YES">
+    <entity name="Application" representedClassName="Application" syncable="YES">
         <attribute name="appealed" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="dateDecided" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateIssued" optional="YES" attributeType="Date" syncable="YES"/>
@@ -17,7 +17,7 @@
         <relationship name="applicant" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Applicant" inverseName="applications" inverseEntity="Applicant" syncable="YES"/>
         <relationship name="property" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Property" inverseName="applications" inverseEntity="Property" syncable="YES"/>
     </entity>
-    <entity name="Property" syncable="YES">
+    <entity name="Property" representedClassName="Property" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
