@@ -11,6 +11,8 @@
 #import <MapKit/MapKit.h>
 #import "Document.h"
 #import "PermitAnnotation.h"
+#import "Application.h"
+#import "Property.h"
 
 @implementation Document
 
@@ -42,6 +44,18 @@
     NSString *address = @"1120 John St, Seattle WA";
     [[self addressField] setStringValue:address];
 //    [self goToAddress:self];
+    
+    Application *application = [NSEntityDescription insertNewObjectForEntityForName:@"Application"
+                                                             inManagedObjectContext:self.managedObjectContext];
+    Property *property = [NSEntityDescription insertNewObjectForEntityForName:@"Property"
+                                                       inManagedObjectContext:self.managedObjectContext];
+    [property setAddress:@"211 John St"];
+    [property setLatitude:@(47.622890)];
+    [property setLongitude:@(122.335317)];
+    
+    [application setPermitNumber:@"pmt123"];
+    [application setPermitDescription:@"Subdivide Plat for Condo/Multi-Tenant use"];
+    [application setProperty:property];
 }
 
 - (void)goToStart:(id)obj
