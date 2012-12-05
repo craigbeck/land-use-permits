@@ -17,4 +17,6 @@
 @property (assign) IBOutlet NSArrayController *applications;
 @property (assign) IBOutlet NSArrayController *applicants;
 
+- (IBAction)seedData:(id)sender;
+
 @end

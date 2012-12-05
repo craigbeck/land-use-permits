@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 #import "Document.h"
 #import "PermitAnnotation.h"
+#import "Applicant.h"
 #import "Application.h"
 #import "Property.h"
 
@@ -36,26 +37,6 @@
 {
     [super windowControllerDidLoadNib:aController];
     // Add any code here that needs to be executed once the windowController has loaded the document's window.
-    
-    [[self mapView] setDelegate: self];
-//    [[self mapView] setCenterCoordinate:coordinate];
-    [self performSelector:@selector(goToStart:) withObject:[self mapView] afterDelay:0.5];
-
-    NSString *address = @"1120 John St, Seattle WA";
-    [[self addressField] setStringValue:address];
-//    [self goToAddress:self];
-    
-    Application *application = [NSEntityDescription insertNewObjectForEntityForName:@"Application"
-                                                             inManagedObjectContext:self.managedObjectContext];
-    Property *property = [NSEntityDescription insertNewObjectForEntityForName:@"Property"
-                                                       inManagedObjectContext:self.managedObjectContext];
-    [property setAddress:@"211 John St"];
-    [property setLatitude:@(47.622890)];
-    [property setLongitude:@(122.335317)];
-    
-    [application setPermitNumber:@"pmt123"];
-    [application setPermitDescription:@"Subdivide Plat for Condo/Multi-Tenant use"];
-    [application setProperty:property];
 }
 
 - (void)goToStart:(id)obj
@@ -115,4 +96,23 @@
     return [pin autorelease];
 }
 
+- (IBAction)seedData:(id)sender
+{
+    Applicant *applicant = [NSEntityDescription insertNewObjectForEntityForName:@"Applicant" inManagedObjectContext:self.managedObjectContext];
+    [applicant setName:@"John Doe"];
+    
+    Application *application = [NSEntityDescription insertNewObjectForEntityForName:@"Application"
+                                                              inManagedObjectContext:self.managedObjectContext];
+    Property *property = [NSEntityDescription insertNewObjectForEntityForName:@"Property"
+                                                       inManagedObjectContext:self.managedObjectContext];
+    [property setAddress:@"211 John St"];
+    [property setLatitude:@(47.622890)];
+    [property setLongitude:@(122.335317)];
+    
+    application.permitNumber = @"pmt456";
+    //    [application setPermitNumber:@"pmt123"];
+    [application setPermitDescription:@"Subdivide Plat for Condo/Multi-Tenant use"];
+    [application setProperty:property];
+    [application setApplicant:applicant];
+}
 @end

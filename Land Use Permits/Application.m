@@ -24,4 +24,9 @@
 @dynamic applicant;
 @dynamic property;
 
+//+ (Applicant *)findOrCreateApplicantWithName:(NSString *)name
+//{
+//    
+//}
+
 @end

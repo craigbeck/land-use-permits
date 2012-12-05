@@ -25,4 +25,6 @@
 @property (nonatomic, retain) Applicant *applicant;
 @property (nonatomic, retain) NSManagedObject *property;
 
+//+ (Applicant *)findOrCreateApplicantWithName:(NSString *)name;
+
 @end
