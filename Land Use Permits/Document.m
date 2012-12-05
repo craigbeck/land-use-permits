@@ -96,6 +96,16 @@
     return [pin autorelease];
 }
 
+- (IBAction)applicantsTableClicked:(NSTableView *)sender {
+    NSArray *selected = [self.applicationArrayController selectedObjects];
+    Application *application = [selected objectAtIndex:0];
+    Property *property = (Property *)application.property;
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = [property.latitude doubleValue];
+    coordinate.longitude = [property.longitude doubleValue];
+    [self.applicationPropertyMapView setCenterCoordinate:coordinate zoomLevel:16 animated:NO];
+}
+
 - (IBAction)seedData:(id)sender
 {
     Applicant *applicant = [NSEntityDescription insertNewObjectForEntityForName:@"Applicant" inManagedObjectContext:self.managedObjectContext];
@@ -106,8 +116,8 @@
     Property *property = [NSEntityDescription insertNewObjectForEntityForName:@"Property"
                                                        inManagedObjectContext:self.managedObjectContext];
     [property setAddress:@"211 John St"];
-    [property setLatitude:@(47.622890)];
-    [property setLongitude:@(122.335317)];
+    [property setLatitude:@(47.70234824)]; // "47.70234824", "-122.31346387"
+    [property setLongitude:@(-122.31346387)];
     
     application.permitNumber = @"pmt456";
     //    [application setPermitNumber:@"pmt123"];

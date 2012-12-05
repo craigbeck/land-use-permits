@@ -16,6 +16,11 @@
 @property (assign) IBOutlet MKMapView *mapView;
 @property (assign) IBOutlet NSArrayController *applications;
 @property (assign) IBOutlet NSArrayController *applicants;
+@property (assign) IBOutlet MKMapView *applicantPropertyMapView;
+@property (assign) IBOutlet MKMapView *applicationPropertyMapView;
+@property (assign) IBOutlet MKMapView *propertyMapView;
+@property (assign) IBOutlet NSArrayController *applicationArrayController;
+- (IBAction)applicantsTableClicked:(NSTableView *)sender;
 
 - (IBAction)seedData:(id)sender;
 
