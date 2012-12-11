@@ -23,6 +23,8 @@
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="applications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Application" inverseName="property" inverseEntity="Application" syncable="YES"/>
     </entity>
+    <fetchRequest name="applicantByName" entity="Applicant" predicateString="name == &quot;%s&quot;"/>
+    <fetchRequest name="propertyByAddress" entity="Property" predicateString="address == &quot;%v&quot;"/>
     <elements>
         <element name="Applicant" positionX="160" positionY="192" width="128" height="75"/>
         <element name="Application" positionX="160" positionY="192" width="128" height="210"/>

@@ -11,4 +11,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+
+- (void)fetchData;
+
 @end

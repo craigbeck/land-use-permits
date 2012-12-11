@@ -1,12 +1,12 @@
 # Land Use Permits HW 6
 
 ## Entities.todo
-- Applicant
+- Applicant @done
 	- properties @done
 		- name @done
 		- has many applications @done
 	- create managed class
-- Application
+- Application @done
 	- properties @done
 		- number @done
 		- status @done
@@ -14,7 +14,7 @@
 		- dateApplied @done
 		- dateDecided @done
 	- create managed class
-- Property
+- Property @done
 	- properties @done
 		- latitude @done
 		- longitude @done
@@ -28,7 +28,12 @@
 - method to create dummy data
 
 ## UI.todo
-- tab view based UI
-	- applications
-	- properties
-- entity properties editable
+- tab view based UI @done
+	- applications @done
+	- properties @done
+- entity properties editable @done
+- adding new record
+	- creates associated property
+	- defaults date to today
+	- first field focus
+	- tab order of fields

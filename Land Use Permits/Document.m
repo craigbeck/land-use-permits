@@ -120,9 +120,26 @@
     [property setLongitude:@(-122.31346387)];
     
     application.permitNumber = @"pmt456";
-    //    [application setPermitNumber:@"pmt123"];
     [application setPermitDescription:@"Subdivide Plat for Condo/Multi-Tenant use"];
     [application setProperty:property];
     [application setApplicant:applicant];
+}
+
+#pragma mark - Find or Create Entity Methods
+
+
+
+
+- (IBAction)addNewRecord:(id)sender
+{
+    
+}
+
+- (IBAction)removeSelectedRecord:(id)sender
+{
+}
+
+- (IBAction)fetchData:(id)sender
+{
 }
 @end

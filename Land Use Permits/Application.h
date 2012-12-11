@@ -25,6 +25,9 @@
 @property (nonatomic, retain) Applicant *applicant;
 @property (nonatomic, retain) NSManagedObject *property;
 
-//+ (Applicant *)findOrCreateApplicantWithName:(NSString *)name;
+
+
++ (Application *)findOrCreateApplicationWithPermitNumber:(NSString *)searchName context:(NSManagedObjectContext *)moc;
++ (NSArray *)applicationsWithPermitNumber:(NSString *)searchName context:(NSManagedObjectContext *)moc;
 
 @end
